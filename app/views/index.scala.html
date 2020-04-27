@@ -1,0 +1,17 @@
+@()(implicit request: Http.Request)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Empty Upload</title>
+    </head>
+    <body>
+        @helper.form(routes.HomeController.upload(), Symbol("enctype") -> "multipart/form-data") {
+            @helper.CSRF.formField
+            <input type="file" name="picture">
+            <p>
+                <input type="submit">
+            </p>
+        }
+    </body>
+</html>

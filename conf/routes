@@ -1,0 +1,3 @@
+GET     /                           controllers.HomeController.index(req: Request)
+POST    /                           controllers.HomeController.upload(req: Request)
+
